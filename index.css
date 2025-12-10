@@ -1,0 +1,113 @@
+/* --- RESET BÁSICO --- */
+* {
+    box-sizing: border-box; /* Para que el padding no aumente el tamaño de las cajas */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Tipografía estándar similar al boceto */
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px; /* Ancho máximo para que no se estire demasiado en pantallas gigantes */
+    margin: 0 auto; /* Centrar la página */
+    border: 1px solid #ccc; /* El borde exterior que se ve en tu imagen */
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* --- HEADER Y MENÚ --- */
+header {
+    border-bottom: 1px solid #000; /* La línea negra debajo del menú */
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.container-menu {
+    display: flex;
+    justify-content: flex-end; /* Alinea todo el menú a la derecha como en la imagen */
+    align-items: center;
+}
+
+/* Ocultamos el logo si no está en el wireframe, o lo ajustamos.
+   Si quieres mantener el logo a la izquierda y menú derecha, cambia justify-content arriba a 'space-between' */
+
+nav ul {
+    list-style: none;
+    display: flex; /* Pone los elementos de la lista en fila */
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: 0.3s;
+}
+
+/* Estilo para el botón "Home" que se ve con borde en tu imagen */
+nav a.active {
+    border: 2px solid #000;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+nav a:hover {
+    color: #555;
+}
+
+/* --- CONTENIDO PRINCIPAL (PROYECTOS) --- */
+.container {
+    padding: 0 20px;
+}
+
+/* Cada bloque de proyecto (Imagen + Texto) */
+.item {
+    display: flex; /* Esto es clave: pone la imagen al lado del texto */
+    align-items: flex-start; /* Alinea al inicio (arriba) */
+    gap: 30px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 60px; /* Espacio debajo de cada proyecto */
+}
+
+/* Estilo de la imagen */
+.item img {
+    width: 300px; /* Ancho fijo similar al boceto */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Para que la imagen no se deforme */
+    border: 1px solid #000; /* Borde negro fino alrededor de la imagen */
+    background-color: #f0f0f0; /* Fondo gris si la imagen no carga */
+    display: block;
+}
+
+/* Contenedor del texto */
+.texto-container {
+    flex: 1; /* Ocupa todo el espacio restante a la derecha */
+}
+
+.texto-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.texto-container p {
+    text-align: justify; /* Justifica el texto como en un periódico/libro */
+    font-size: 0.95rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    border-top: 2px solid #000; /* La línea gruesa arriba del footer */
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.2rem; /* Tamaño de los iconos */
+}
