@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container navbar">
+            <div class="logo">Mi Portafolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="projects.html" class="nav-item">Projects</a></li>
+                <li><a href="index.html#about" class="nav-item">About me</a></li>
+                <li><a href="contact.html" class="nav-item active">Contact</a></li> </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">CONTACT</h1>
+
+        <div class="contact-container">
+            <div class="contact-map-area">
+                 <img src="https://placehold.co/600x600/ddd/333?text=Map+Location" alt="Ubicación">
+            </div>
+
+            <div class="contact-form-area">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="8" placeholder="How can I help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div id="formFeedback"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2023 Ivan | Iker Desarrolladores. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contactForm');
+            const formFeedback = document.getElementById('formFeedback');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const nameInput = document.getElementById('name');
+                    const emailInput = document.getElementById('email');
+                    const messageInput = document.getElementById('message');
+
+                    if (nameInput.value && emailInput.value && messageInput.value) {
+                        formFeedback.style.color = 'green';
+                        formFeedback.textContent = '¡Mensaje enviado correctamente! Gracias por contactar.';
+                        contactForm.reset();
+                    } else {
+                        formFeedback.style.color = 'red';
+                        formFeedback.textContent = 'Por favor, rellena todos los campos.';
+                    }
+
+                    setTimeout(() => {
+                        formFeedback.textContent = '';
+                    }, 5000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

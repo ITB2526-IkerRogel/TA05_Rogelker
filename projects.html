@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container navbar">
+            <div class="logo">Mi Portafolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="projects.html" class="nav-item active">Projects</a></li> <li><a href="index.html#about" class="nav-item">About me</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="tech1">Technology 1</button>
+            <button class="filter-btn" data-filter="tech2">Technology 2</button>
+            <button class="filter-btn" data-filter="tech3">Technology 3</button>
+        </section>
+
+        <section class="projects-grid">
+            <div class="project-card" data-category="tech1">
+                <div class="card-image"><img src="https://placehold.co/400x300/0056b3/ffffff?text=Project+1" alt="P1"></div>
+                <div class="card-info"><h3>Project 1</h3></div>
+            </div>
+            <div class="project-card" data-category="tech2">
+                <div class="card-image"><img src="https://placehold.co/400x300/555555/ffffff?text=Project+2" alt="P2"></div>
+                <div class="card-info"><h3>Project 2</h3></div>
+            </div>
+            <div class="project-card" data-category="tech1">
+                <div class="card-image"><img src="https://placehold.co/400x300/0056b3/ffffff?text=Project+3" alt="P3"></div>
+                <div class="card-info"><h3>Project 3</h3></div>
+            </div>
+            <div class="project-card" data-category="tech3">
+                <div class="card-image"><img src="https://placehold.co/400x300/777777/ffffff?text=Project+4" alt="P4"></div>
+                <div class="card-info"><h3>Project 4</h3></div>
+            </div>
+            <div class="project-card" data-category="tech2">
+                <div class="card-image"><img src="https://placehold.co/400x300/555555/ffffff?text=Project+5" alt="P5"></div>
+                <div class="card-info"><h3>Project 5</h3></div>
+            </div>
+             <div class="project-card" data-category="tech3">
+                <div class="card-image"><img src="https://placehold.co/400x300/777777/ffffff?text=Project+6" alt="P6"></div>
+                <div class="card-info"><h3>Project 6</h3></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2023 Ivan | Iker Desarrolladores. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Quitar clase activa de todos los botones
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Activar el botón clicado
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
