@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectes Acadèmics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="../IMG/ITB-Logo.png" alt="Logotip ITB" class="main-logo">
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about-me.html">About me</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-list">
+
+            <article class="card">
+                <div class="wireframe-img">
+                    <div class="placeholder-content"></div>
+                </div>
+                <div class="card-content">
+                    <h2>Desenvolupament Web FullStack</h2>
+                    <aside class="subtitle">Grau Superior DAW</aside>
+                    <p class="description">
+                        Creació d'una plataforma web completa utilitzant React per al frontend i Node.js per al backend.
+                    </p>
+                </div>
+
+                <div class="overlay">
+                    <h3>Detalls Tècnics</h3>
+                    <p><strong>Stack:</strong> React, Node.js, Express, MongoDB.</p>
+                    <p><strong>Funcionalitats:</strong> Autenticació JWT, gestió d'usuaris en temps real i desplegament al núvol.</p>
+                    <div class="icon-row">
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fas fa-database"></i>
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="wireframe-img">
+                    <div class="placeholder-content"></div>
+                </div>
+                <div class="card-content">
+                    <h2>Ciberseguretat: Pentesting</h2>
+                    <aside class="subtitle">Curs d'Especialització</aside>
+                    <p class="description">
+                        Auditoria de seguretat i anàlisi de vulnerabilitats en xarxes corporatives.
+                    </p>
+                </div>
+
+                <div class="overlay">
+                    <h3>Informe d'Auditoria</h3>
+                    <p><strong>Eines:</strong> Kali Linux, Wireshark, Metasploit, Burp Suite.</p>
+                    <p><strong>Objectiu:</strong> Hacking Ètic, simulació d'atacs i Hardening de servidors Linux.</p>
+                    <div class="icon-row">
+                        <i class="fab fa-linux"></i>
+                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Institut Tecnològic de Barcelona.</p>
+            <div class="social-icons">
+                <a href="#"><img src="../IMG/instagram-logo-sinfondo.png" alt="IG"></a>
+                <a href="#"><img src="../IMG/git-logo-sin-fondo.png" alt="GH"></a>
+                <a href="#"><img src="../IMG/linkedin-logo-sin-fondo.png" alt="LI"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/java.js"></script>
+</body>
+</html>
