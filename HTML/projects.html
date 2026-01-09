@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detall dels Projectes</title>
+    <meta name="description" content="Llistat de projectes realitzats">
+    <title>Projectes - ITB</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -17,8 +18,8 @@
         </div>
         <nav>
             <ul id="nav-list">
-                <li><a href="home.html" class="active">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="about-me.html">About me</a></li>
                 <li><a href="contact.html" class="btn-contact">Contact</a></li>
                 <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
@@ -29,56 +30,31 @@
         </nav>
     </header>
 
-    <main class="detail-main">
+    <main class="projects-main">
 
-        <section class="project-row">
-            <div class="project-image-container">
-                <div class="mockup-screen">
-                    <i class="fas fa-code"></i>
-                </div>
-            </div>
-            <div class="project-text">
-                <h2>Desenvolupament Web FullStack</h2>
-                <span class="badge">React & Node.js</span>
-                <p>
-                    Aquest projecte consisteix en la creació d'una plataforma web completa dissenyada per a la gestió d'usuaris i continguts en temps real.
-                    S'ha utilitzat <strong>React</strong> per a un frontend dinàmic i reactiu, connectat a una API REST desenvolupada amb <strong>Node.js</strong> i Express.
-                </p>
-                <p>
-                    La base de dades utilitzada és <strong>MongoDB</strong>, permetent una escalabilitat horitzontal. El projecte inclou autenticació segura (JWT), càrrega d'imatges i un panell d'administració.
-                </p>
-            </div>
+        <section class="filters-container">
+            <button class="filter-btn active" data-filter="all">Tots</button>
+            <button class="filter-btn" data-filter="ciber">Ciberseguretat</button>
+            <button class="filter-btn" data-filter="web">Desenv. Web</button>
+            <button class="filter-btn" data-filter="prog">Programació</button>
         </section>
 
-        <hr class="section-divider">
+        <section class="projects-grid" id="projects-grid">
+            </section>
 
-        <section class="project-row reverse">
-            <div class="project-image-container">
-                <div class="mockup-screen security-theme">
-                    <i class="fas fa-user-secret"></i>
-                </div>
-            </div>
-            <div class="project-text">
-                <h2>Ciberseguretat: Pentesting</h2>
-                <span class="badge">Kali Linux & Wireshark</span>
-                <p>
-                    Auditoria de seguretat exhaustiva realitzada en un entorn corporatiu simulat. L'objectiu principal va ser identificar i explotar vulnerabilitats crítiques per posteriorment corregir-les (Hacking Ètic).
-                </p>
-                <p>
-                    Es van utilitzar eines com <strong>Nmap</strong> per a l'escaneig de xarxes, <strong>Metasploit</strong> per a l'explotació i <strong>Wireshark</strong> per a l'anàlisi de trànsit. L'informe final detalla els vectors d'atac i les mesures de mitigació recomanades.
-                </p>
-            </div>
-        </section>
+        <div class="load-more-container">
+            <button id="load-more-btn" class="btn-load-more">Veure més projectes</button>
+        </div>
 
     </main>
+
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 Institut Tecnològic de Barcelona. All rights reserved.</p>
-
+            <p>&copy; 2025 Institut Tecnològic de Barcelona.</p>
             <div class="social-icons">
-                <a href="#" title="Instagram"><img src="../IMG/instagram-logo-sinfondo.png" alt="Instagram"></a>
-                <a href="#" title="GitHub"><img src="../IMG/git-logo-sin-fondo.png" alt="GitHub"></a>
-                <a href="#" title="LinkedIn"><img src="../IMG/linkedin-logo-sin-fondo.png" alt="LinkedIn"></a>
+                <a href="#"><img src="../IMG/instagram-logo-sinfondo.png" alt="IG"></a>
+                <a href="#"><img src="../IMG/git-logo-sin-fondo.png" alt="GH"></a>
+                <a href="#"><img src="../IMG/linkedin-logo-sin-fondo.png" alt="LI"></a>
             </div>
         </div>
     </footer>

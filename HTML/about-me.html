@@ -1,68 +1,136 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Mi Portafolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../index.css">
+    <title>Sobre Mi - ITB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <img src="ITB-Logo.png" alt="Logotip ITB" class="main-logo">
+            <img src="../IMG/ITB-Logo.png" alt="Logotip ITB" class="main-logo">
         </div>
         <nav>
-            <ul>
-                <li><a href="home.html" class="active">Home</a></li>
+            <ul id="nav-list">
+                <li><a href="home.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="about-me.html">About me</a></li>
+                <li><a href="about-me.html" class="active">About me</a></li>
                 <li><a href="contact.html" class="btn-contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
             </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-    <main class="container">
-        <h1 class="page-title">CONTACT</h1>
+    <main class="about-main">
 
-        <div class="contact-container">
-            <div class="contact-map-area">
-                 <img src="https://placehold.co/600x600/ddd/333?text=Map+Location+Placeholder" alt="Ubicación">
+        <section class="about-hero">
+            <div class="about-text animate-on-scroll">
+                <h4>Hola, sóc Desenvolupador FullStack</h4>
+                <h1>Creant solucions digitals amb passió i codi.</h1>
+                <p>
+                    Sóc un apassionat de la tecnologia i la ciberseguretat. M'encanta transformar idees complexes en interfícies netes i funcionals. Actualment formant-me a l'Institut Tecnològic de Barcelona per convertir-me en un expert del sector.
+                </p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn-primary">Contacta'm</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-download"></i> Descarregar CV</a>
+                </div>
             </div>
 
-            <div class="contact-form-area">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <div class="about-image animate-on-scroll">
+                <div class="image-frame">
+                    <div class="placeholder-profile">
+                        <i class="fas fa-user"></i>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="8" placeholder="How can I help you?" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-                <div id="formFeedback"></div>
+                    <div class="floating-badge badge-1"><i class="fab fa-react"></i></div>
+                    <div class="floating-badge badge-2"><i class="fas fa-code"></i></div>
+                    <div class="floating-badge badge-3"><i class="fas fa-shield-alt"></i></div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="skills-section animate-on-scroll">
+            <h2 class="section-title">Les meves Habilitats</h2>
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="icon-circle"><i class="fab fa-js"></i></div>
+                    <h3>JavaScript</h3>
+                    <p>Desenvolupament frontend dinàmic i lògica complexa.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon-circle"><i class="fab fa-react"></i></div>
+                    <h3>React</h3>
+                    <p>Creació de SPA (Single Page Applications) modernes.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon-circle"><i class="fab fa-node"></i></div>
+                    <h3>Node.js</h3>
+                    <p>Backend escalable i gestió d'APIs RESTful.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon-circle"><i class="fas fa-database"></i></div>
+                    <h3>Databases</h3>
+                    <p>Gestió de dades amb SQL i MongoDB.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="timeline-section animate-on-scroll">
+            <h2 class="section-title">Trajectòria</h2>
+            <div class="timeline">
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">2024 - Present</span>
+                        <h3>Curs d'Especialització Ciberseguretat</h3>
+                        <p>Aprofundint en pentesting, auditoria de xarxes i hacking ètic a l'ITB.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">2022 - 2024</span>
+                        <h3>Grau Superior DAW</h3>
+                        <p>Desenvolupament d'Aplicacions Web. Aprenentatge complet de frontend i backend.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">2020 - 2022</span>
+                        <h3>Batxillerat Tecnològic</h3>
+                        <p>Base sòlida en matemàtiques, física i primers passos en programació.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <div class="container footer-content">
-            <p>© 2023 Ivan | Iker Desarrolladores. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Institut Tecnològic de Barcelona.</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><img src="../IMG/instagram-logo-sinfondo.png" alt="IG"></a>
+                <a href="#"><img src="../IMG/git-logo-sin-fondo.png" alt="GH"></a>
+                <a href="#"><img src="../IMG/linkedin-logo-sin-fondo.png" alt="LI"></a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../JS/java.js"></script>
 </body>
 </html>

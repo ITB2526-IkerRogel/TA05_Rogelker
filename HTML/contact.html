@@ -1,96 +1,119 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Mi Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contacte - ITB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <img src="ITB-Logo.png" alt="Logotip ITB" class="main-logo">
+            <img src="../IMG/ITB-Logo.png" alt="Logotip ITB" class="main-logo">
         </div>
         <nav>
-            <ul>
-                <li><a href="home.html" class="active">Home</a></li>
+            <ul id="nav-list">
+                <li><a href="home.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="about-me.html">About me</a></li>
-                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+                <li><a href="contact.html" class="active btn-contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
             </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-    <main class="container">
-        <h1 class="page-title">CONTACT</h1>
+    <main class="contact-main-premium">
 
-        <div class="contact-container">
-            <div class="contact-map-area">
-                 <img src="https://placehold.co/600x600/ddd/333?text=Map+Location" alt="Ubicación">
+        <div class="premium-contact-wrapper">
+
+            <div class="contact-info-panel">
+                <div class="info-header">
+                    <h2>Parlem?</h2>
+                    <p>Estem aquí per ajudar-te a impulsar el teu pròxim projecte digital.</p>
+                </div>
+
+                <div class="info-details">
+                    <div class="detail-item">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <p>Carrer de Santaló, 123<br>08021 Barcelona</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <p>info@itb.cat</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <p>+34 93 123 45 67</p>
+                    </div>
+                </div>
+
+                <div class="info-socials">
+                    <p>Segueix-nos:</p>
+                    <div class="social-links-row">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="circle c1"></div>
+                <div class="circle c2"></div>
             </div>
 
-            <div class="contact-form-area">
+            <div class="contact-form-panel">
                 <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <h3>Envia'ns un missatge</h3>
+
+                    <div class="input-container">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">El teu Nom</label>
+                        <div class="underline"></div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Correu Electrònic</label>
+                        <div class="underline"></div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="8" placeholder="How can I help you?" required></textarea>
+
+                    <div class="input-container">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Assumpte</label>
+                        <div class="underline"></div>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+
+                    <div class="input-container">
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">Missatge</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <button type="submit" class="btn-send-premium">ENVIAR ARA</button>
                 </form>
-                <div id="formFeedback"></div>
             </div>
+
         </div>
+
     </main>
 
     <footer>
-        <div class="container footer-content">
-            <p>© 2023 Ivan | Iker Desarrolladores. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Institut Tecnològic de Barcelona.</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><img src="../IMG/instagram-logo-sinfondo.png" alt="IG"></a>
+                <a href="#"><img src="../IMG/git-logo-sin-fondo.png" alt="GH"></a>
+                <a href="#"><img src="../IMG/linkedin-logo-sin-fondo.png" alt="LI"></a>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const contactForm = document.getElementById('contactForm');
-            const formFeedback = document.getElementById('formFeedback');
-
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    const nameInput = document.getElementById('name');
-                    const emailInput = document.getElementById('email');
-                    const messageInput = document.getElementById('message');
-
-                    if (nameInput.value && emailInput.value && messageInput.value) {
-                        formFeedback.style.color = 'green';
-                        formFeedback.textContent = '¡Mensaje enviado correctamente! Gracias por contactar.';
-                        contactForm.reset();
-                    } else {
-                        formFeedback.style.color = 'red';
-                        formFeedback.textContent = 'Por favor, rellena todos los campos.';
-                    }
-
-                    setTimeout(() => {
-                        formFeedback.textContent = '';
-                    }, 5000);
-                });
-            }
-        });
-    </script>
+    <script src="../JS/java.js"></script>
 </body>
 </html>
