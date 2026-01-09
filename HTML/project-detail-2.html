@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentesting Audit - Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body class="detail-body">
+
+    <header>
+        <div class="logo-container">
+            <img src="../IMG/ITB-Logo.png" alt="ITB Logo" class="main-logo">
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about-me.html">About me</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <section class="project-hero hero-bg-sec">
+        <div class="hero-decoration">
+            <div class="hero-circle hc1"></div>
+            <div class="hero-circle hc2"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-category" style="border:1px solid #00ff88; color:#00ff88;">Cybersecurity Ops</span>
+            <h1 class="hero-title">Corporate Network<br>Pentesting Audit</h1>
+        </div>
+    </section>
+
+    <main class="showcase-container">
+
+        <div class="project-mockup" style="background: #111;">
+            <div class="browser-bar" style="background: #222; border-color: #333;">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+            <div class="screen-content" style="background: #000; color: #00ff88; font-family: monospace;">
+                <i class="fas fa-terminal"></i>
+            </div>
+        </div>
+
+        <div class="project-body">
+
+            <div class="content-column">
+                <section class="content-section">
+                    <h2>Audit Objective</h2>
+                    <p>
+                        The main objective of this project was to evaluate the resilience of the network infrastructure of a simulated company "TechCorp" against external and internal attacks. A Black Box penetration test was performed following the PTES methodology.
+                    </p>
+                    <p>
+                        During the process, multiple critical attack vectors were identified, including outdated services and default configurations on production servers.
+                    </p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Executed Phases</h2>
+                    <div class="features-grid">
+                        <div class="feature-box">
+                            <i class="fas fa-search" style="color:#00ff88;"></i>
+                            <h4>Recon & Scanning</h4>
+                            <p>Passive information gathering and active port scanning with Nmap.</p>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-bug" style="color:#00ff88;"></i>
+                            <h4>Exploitation</h4>
+                            <p>Use of Metasploit to exploit known CVE vulnerabilities.</p>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-user-secret" style="color:#00ff88;"></i>
+                            <h4>Privilege Escalation</h4>
+                            <p>Privilege escalation on Linux systems using Kernel exploits.</p>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-file-contract" style="color:#00ff88;"></i>
+                            <h4>Reporting</h4>
+                            <p>Technical and executive documentation with CVSS scoring.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="info-card">
+                    <div class="info-item">
+                        <h3>Tools</h3>
+                        <div class="tech-tags">
+                            <span class="tag"><i class="fab fa-linux"></i> Kali</span>
+                            <span class="tag"><i class="fas fa-network-wired"></i> Wireshark</span>
+                            <span class="tag"><i class="fas fa-terminal"></i> Bash</span>
+                            <span class="tag"><i class="fab fa-python"></i> Python</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Type</h3>
+                        <p>Red Team Operation</p>
+                    </div>
+
+                    <div class="action-buttons">
+                        <a href="#" class="btn-action btn-primary-action" style="background: #222; border: 1px solid #00ff88; color: #00ff88;">
+                            Download Report <i class="fas fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+        <div class="project-navigation-footer">
+            <h3>Want to see more projects?</h3>
+            <a href="projects.html" class="btn-big-back">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Institut Tecnològic de Barcelona.</p>
+            <div class="social-icons">
+                <a href="#"><img src="../IMG/instagram-logo-sinfondo.png" alt="IG"></a>
+                <a href="#"><img src="../IMG/git-logo-sin-fondo.png" alt="GH"></a>
+                <a href="#"><img src="../IMG/linkedin-logo-sin-fondo.png" alt="LI"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/java.js"></script>
+</body>
+</html>
