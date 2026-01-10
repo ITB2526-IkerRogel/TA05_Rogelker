@@ -32,7 +32,7 @@
             <div class="hero-circle hc2"></div>
         </div>
         <div class="hero-content">
-            <span class="hero-category" style="border:1px solid #00ff88; color:#00ff88;">Cybersecurity Ops</span>
+            <span class="hero-category" style="border:1px solid #00ff88; color:#00ff88;">Red Team Ops</span>
             <h1 class="hero-title">Corporate Network<br>Pentesting Audit</h1>
         </div>
     </section>
@@ -54,37 +54,37 @@
 
             <div class="content-column">
                 <section class="content-section">
-                    <h2>Audit Objective</h2>
+                    <h2>Audit Objectives & Scope</h2>
                     <p>
-                        The main objective of this project was to evaluate the resilience of the network infrastructure of a simulated company "TechCorp" against external and internal attacks. A Black Box penetration test was performed following the PTES methodology.
+                        This operation simulated a targeted attack against "TechCorp", a fictitious entity with a complex segmented network. The primary objective was to demonstrate the business impact of unpatched vulnerabilities and weak configurations. The engagement followed a Black Box approach, starting with zero knowledge of the internal infrastructure.
                     </p>
                     <p>
-                        During the process, multiple critical attack vectors were identified, including outdated services and default configurations on production servers.
+                        The audit spanned over 4 weeks and covered external perimeter testing, web application security assessments, and internal network pivot scenarios to test the resilience of the Active Directory implementation.
                     </p>
                 </section>
 
                 <section class="content-section">
-                    <h2>Executed Phases</h2>
+                    <h2>Attack Vector Analysis</h2>
                     <div class="features-grid">
                         <div class="feature-box">
-                            <i class="fas fa-search" style="color:#00ff88;"></i>
-                            <h4>Recon & Scanning</h4>
-                            <p>Passive information gathering and active port scanning with Nmap.</p>
+                            <i class="fas fa-network-wired" style="color:#00ff88;"></i>
+                            <h4>Network Recon</h4>
+                            <p>Mapped attack surface using Nmap/Masscan identifying exposed SMB services.</p>
                         </div>
                         <div class="feature-box">
                             <i class="fas fa-bug" style="color:#00ff88;"></i>
-                            <h4>Exploitation</h4>
-                            <p>Use of Metasploit to exploit known CVE vulnerabilities.</p>
+                            <h4>CVE Exploitation</h4>
+                            <p>Leveraged EternalBlue (MS17-010) to gain initial foothold on legacy systems.</p>
                         </div>
                         <div class="feature-box">
-                            <i class="fas fa-user-secret" style="color:#00ff88;"></i>
-                            <h4>Privilege Escalation</h4>
-                            <p>Privilege escalation on Linux systems using Kernel exploits.</p>
+                            <i class="fas fa-users-cog" style="color:#00ff88;"></i>
+                            <h4>Active Directory</h4>
+                            <p>Executed Kerberoasting attacks to crack service account passwords offline.</p>
                         </div>
                         <div class="feature-box">
                             <i class="fas fa-file-contract" style="color:#00ff88;"></i>
-                            <h4>Reporting</h4>
-                            <p>Technical and executive documentation with CVSS scoring.</p>
+                            <h4>Post-Exploitation</h4>
+                            <p>Established persistence and simulated data exfiltration via DNS tunneling.</p>
                         </div>
                     </div>
                 </section>
@@ -93,23 +93,23 @@
             <aside class="project-sidebar">
                 <div class="info-card">
                     <div class="info-item">
-                        <h3>Tools</h3>
+                        <h3>Arsenal</h3>
                         <div class="tech-tags">
-                            <span class="tag"><i class="fab fa-linux"></i> Kali</span>
-                            <span class="tag"><i class="fas fa-network-wired"></i> Wireshark</span>
-                            <span class="tag"><i class="fas fa-terminal"></i> Bash</span>
-                            <span class="tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="tag"><i class="fab fa-linux"></i> Kali Linux</span>
+                            <span class="tag"><i class="fas fa-spider"></i> Burp Suite</span>
+                            <span class="tag"><i class="fas fa-bomb"></i> Metasploit</span>
+                            <span class="tag"><i class="fas fa-code"></i> PowerShell</span>
                         </div>
                     </div>
 
                     <div class="info-item">
-                        <h3>Type</h3>
-                        <p>Red Team Operation</p>
+                        <h3>Methodology</h3>
+                        <p>PTES / OSSTMM</p>
                     </div>
 
                     <div class="action-buttons">
                         <a href="#" class="btn-action btn-primary-action" style="background: #222; border: 1px solid #00ff88; color: #00ff88;">
-                            Download Report <i class="fas fa-file-pdf"></i>
+                            Download Findings <i class="fas fa-file-pdf"></i>
                         </a>
                     </div>
                 </div>

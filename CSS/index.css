@@ -64,7 +64,7 @@ main {
 }
 
 /* =========================================
-   4. HOME STYLES
+   4. HOME STYLES (Tarjetas horizontales)
    ========================================= */
 .card-link { text-decoration: none; color: inherit; display: block; margin-bottom: 40px; }
 
@@ -91,7 +91,7 @@ aside.subtitle { color: var(--itb-red); font-weight: 700; text-transform: upperc
 .overlay { display: none !important; }
 
 /* =========================================
-   5. PROJECTS STYLES
+   5. PROJECTS STYLES (Con soporte de FOTOS)
    ========================================= */
 .filters-container { display: flex; justify-content: center; gap: 20px; margin-bottom: 50px; flex-wrap: wrap; }
 .filter-btn { padding: 12px 35px; background-color: var(--bg-card); border: 2px solid var(--border-color); color: var(--text-main); border-radius: 50px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem; }
@@ -113,10 +113,40 @@ aside.subtitle { color: var(--itb-red); font-weight: 700; text-transform: upperc
 }
 .project-card:hover { transform: translateY(-8px); box-shadow: var(--card-hover-shadow); }
 
-.card-visual { height: 65%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: rgba(255,255,255,0.95); background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.project-card.ciber .card-visual { background: linear-gradient(135deg, #141E30 0%, #243B55 100%); }
-.project-card.web .card-visual   { background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%); }
-.project-card.prog .card-visual  { background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%); }
+/* --- AQUÍ ESTÁ EL CAMBIO PARA LAS FOTOS --- */
+.card-visual {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; /* Foto cubre todo */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Capa oscura suave sobre la foto para que se vea pro */
+.card-visual::after {
+    content: '';
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.project-card:hover .card-visual::after { background: rgba(0,0,0,0); }
+
+/* Icono (si no hay foto) */
+.card-visual i {
+    font-size: 5rem;
+    color: rgba(255,255,255,0.9);
+    z-index: 2;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Colores de respaldo por si falla la foto */
+.project-card.ciber .card-visual { background-color: #141E30; }
+.project-card.web .card-visual   { background-color: #ee0979; }
+.project-card.prog .card-visual  { background-color: #00b09b; }
 
 .card-basic-info { height: 35%; padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--bg-card); z-index: 2; }
 .card-basic-info h3 { font-size: 1.6rem; color: var(--text-main); margin-bottom: 10px; }
@@ -187,7 +217,7 @@ aside.subtitle { color: var(--itb-red); font-weight: 700; text-transform: upperc
 
 .premium-contact-wrapper { display: flex; gap: 60px; align-items: stretch; width: 100%; min-height: 650px; }
 
-/* Panel Izquierdo (Info) */
+/* Izquierda */
 .contact-info-panel {
     flex: 4; background: linear-gradient(135deg, #222 0%, #000 100%); color: #fff; padding: 60px;
     position: relative; display: flex; flex-direction: column; justify-content: space-between;
@@ -208,7 +238,7 @@ aside.subtitle { color: var(--itb-red); font-weight: 700; text-transform: upperc
 .social-links-row a { width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: white; transition: 0.3s; font-size: 1.2rem; }
 .social-links-row a:hover { background: var(--itb-red); border-color: var(--itb-red); transform: translateY(-5px); }
 
-/* Panel Derecho (Formulario) */
+/* Derecha */
 .contact-form-panel {
     flex: 6; background: var(--bg-card); padding: 70px; display: flex; flex-direction: column; justify-content: center;
     border-radius: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.08);
@@ -275,7 +305,7 @@ body.dark-mode .browser-bar { background: #333; border-color: #444; }
 .btn-secondary-action { border: 2px solid var(--text-main); color: var(--text-main); }
 .btn-secondary-action:hover { background: var(--text-main); color: white; }
 
-/* Botón Navegación Inferior (Nuevo) */
+/* Botón Volver (Footer Detalles) */
 .project-navigation-footer { margin-top: 80px; padding-top: 50px; border-top: 1px solid var(--border-color); text-align: center; padding-bottom: 20px; }
 .project-navigation-footer h3 { font-size: 1.5rem; color: var(--text-main); margin-bottom: 25px; font-weight: 700; }
 .btn-big-back { display: inline-flex; align-items: center; gap: 15px; padding: 18px 50px; background-color: var(--itb-black); color: #fff; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }

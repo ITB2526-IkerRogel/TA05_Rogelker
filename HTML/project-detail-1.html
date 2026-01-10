@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Platform - Project</title>
+    <title>SOC Architecture - Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/index.css">
@@ -26,27 +26,27 @@
         </nav>
     </header>
 
-    <section class="project-hero hero-bg-web">
+    <section class="project-hero hero-bg-sec">
         <div class="hero-decoration">
             <div class="hero-circle hc1"></div>
             <div class="hero-circle hc2"></div>
         </div>
         <div class="hero-content">
-            <span class="hero-category">FullStack Development</span>
-            <h1 class="hero-title">E-Commerce<br>Platform Pro</h1>
+            <span class="hero-category" style="border:1px solid #00a8ff; color:#00a8ff;">Blue Team Defense</span>
+            <h1 class="hero-title">Next-Gen SOC<br>Implementation</h1>
         </div>
     </section>
 
     <main class="showcase-container">
 
-        <div class="project-mockup">
-            <div class="browser-bar">
+        <div class="project-mockup" style="background: #0f172a;">
+            <div class="browser-bar" style="background: #1e293b; border-color: #334155;">
                 <div class="dot red"></div>
                 <div class="dot yellow"></div>
                 <div class="dot green"></div>
             </div>
-            <div class="screen-content">
-                <i class="fab fa-react" style="color: #61DAFB;"></i>
+            <div class="screen-content" style="background: #0f172a; color: #00a8ff; font-family: monospace;">
+                <i class="fas fa-shield-virus"></i>
             </div>
         </div>
 
@@ -54,37 +54,37 @@
 
             <div class="content-column">
                 <section class="content-section">
-                    <h2>About the Project</h2>
+                    <h2>Project Overview</h2>
                     <p>
-                        This project was born from the need to create a smooth and secure online shopping experience. I developed an architecture based on (simulated) microservices using the MERN stack, prioritizing scalability and loading speed.
+                        In an era where data breaches are inevitable, detection speed is critical. This project involved building a fully functional Security Operations Center (SOC) from scratch using open-source technologies. The goal was to create a centralized platform capable of ingesting logs from firewalls, servers, and endpoints to detect anomalies in real-time.
                     </p>
                     <p>
-                        The system allows full inventory management by administrators, while users enjoy a simplified checkout process with integrated payment gateway via Stripe API.
+                        By integrating Wazuh agents for endpoint telemetry and the ELK Stack for indexing and visualization, I established a robust pipeline for security events. The system filters noise and highlights high-fidelity alerts mapped to the MITRE ATT&CK framework.
                     </p>
                 </section>
 
                 <section class="content-section">
-                    <h2>Key Features</h2>
+                    <h2>Technical Implementation</h2>
                     <div class="features-grid">
                         <div class="feature-box">
-                            <i class="fas fa-bolt"></i>
-                            <h4>Optimal Performance</h4>
-                            <p>Lazy-loading for images and database query optimization.</p>
+                            <i class="fas fa-database" style="color:#00a8ff;"></i>
+                            <h4>Log Ingestion</h4>
+                            <p>Configured Logstash pipelines to parse syslog and JSON data from Linux/Windows fleets.</p>
                         </div>
                         <div class="feature-box">
-                            <i class="fas fa-lock"></i>
-                            <h4>JWT Security</h4>
-                            <p>Robust authentication with access and refresh tokens to protect sessions.</p>
+                            <i class="fas fa-code-branch" style="color:#00a8ff;"></i>
+                            <h4>Custom Rules</h4>
+                            <p>Developed Sigma rules converted to Elastic queries to detect lateral movement.</p>
                         </div>
                         <div class="feature-box">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h4>Responsive Design</h4>
-                            <p>"Mobile First" design adapted to any device.</p>
+                            <i class="fas fa-robot" style="color:#00a8ff;"></i>
+                            <h4>SOAR Automation</h4>
+                            <p>Integrated TheHive & Cortex to auto-analyze suspicious IPs and file hashes.</p>
                         </div>
                         <div class="feature-box">
-                            <i class="fas fa-chart-line"></i>
-                            <h4>Admin Dashboard</h4>
-                            <p>Control panel with real-time sales charts.</p>
+                            <i class="fas fa-chart-area" style="color:#00a8ff;"></i>
+                            <h4>Kibana Dashboards</h4>
+                            <p>Created visual heatmaps for geo-location of attacks and brute-force trends.</p>
                         </div>
                     </div>
                 </section>
@@ -95,29 +95,24 @@
                     <div class="info-item">
                         <h3>Tech Stack</h3>
                         <div class="tech-tags">
-                            <span class="tag"><i class="fab fa-react"></i> React</span>
-                            <span class="tag"><i class="fab fa-node-js"></i> Node.js</span>
-                            <span class="tag"><i class="fas fa-database"></i> MongoDB</span>
-                            <span class="tag"><i class="fab fa-sass"></i> Sass</span>
+                            <span class="tag"><i class="fas fa-search"></i> Elasticsearch</span>
+                            <span class="tag"><i class="fas fa-dog"></i> Wazuh</span>
+                            <span class="tag"><i class="fas fa-hive"></i> TheHive</span>
+                            <span class="tag"><i class="fab fa-docker"></i> Docker</span>
                         </div>
                     </div>
 
                     <div class="info-item">
-                        <h3>Year</h3>
-                        <p>2024</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h3>Role</h3>
-                        <p>FullStack Developer</p>
+                        <h3>Focus</h3>
+                        <p>Defensive Security / SIEM</p>
                     </div>
 
                     <div class="action-buttons">
-                        <a href="#" class="btn-action btn-primary-action">
-                            View Demo <i class="fas fa-external-link-alt"></i>
+                        <a href="#" class="btn-action btn-primary-action" style="background: #1e293b; border: 1px solid #00a8ff; color: #00a8ff;">
+                            View Architecture <i class="fas fa-sitemap"></i>
                         </a>
                         <a href="#" class="btn-action btn-secondary-action">
-                            GitHub Code <i class="fab fa-github"></i>
+                            GitHub Configs <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
