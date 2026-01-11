@@ -32,15 +32,15 @@
             <div class="hero-circle hc2"></div>
         </div>
         <div class="hero-content">
-            <span class="hero-category" style="border:1px solid #00ff88; color:#00ff88;">Red Team Ops</span>
-            <h1 class="hero-title">Corporate Network<br>Pentesting Audit</h1>
+            <span class="hero-category" style="border:1px solid #00ff88; color:#00ff88;">Red Team Operations</span>
+            <h1 class="hero-title">Advanced Corporate<br>Infrastructure Pentest</h1>
         </div>
     </section>
 
     <main class="showcase-container">
 
-        <div class="project-mockup" style="background: #111;">
-            <div class="browser-bar" style="background: #222; border-color: #333;">
+        <div class="project-mockup" style="background: #0d0d0d;">
+            <div class="browser-bar" style="background: #1a1a1a; border-color: #333;">
                 <div class="dot red"></div>
                 <div class="dot yellow"></div>
                 <div class="dot green"></div>
@@ -50,80 +50,74 @@
             </div>
         </div>
 
-        <div class="project-body">
+        <div class="wireframe-main">
 
-            <div class="content-column">
-                <section class="content-section">
-                    <h2>Audit Objectives & Scope</h2>
-                    <p>
-                        This operation simulated a targeted attack against "TechCorp", a fictitious entity with a complex segmented network. The primary objective was to demonstrate the business impact of unpatched vulnerabilities and weak configurations. The engagement followed a Black Box approach, starting with zero knowledge of the internal infrastructure.
-                    </p>
-                    <p>
-                        The audit spanned over 4 weeks and covered external perimeter testing, web application security assessments, and internal network pivot scenarios to test the resilience of the Active Directory implementation.
-                    </p>
-                </section>
-
-                <section class="content-section">
-                    <h2>Attack Vector Analysis</h2>
-                    <div class="features-grid">
-                        <div class="feature-box">
-                            <i class="fas fa-network-wired" style="color:#00ff88;"></i>
-                            <h4>Network Recon</h4>
-                            <p>Mapped attack surface using Nmap/Masscan identifying exposed SMB services.</p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-bug" style="color:#00ff88;"></i>
-                            <h4>CVE Exploitation</h4>
-                            <p>Leveraged EternalBlue (MS17-010) to gain initial foothold on legacy systems.</p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-users-cog" style="color:#00ff88;"></i>
-                            <h4>Active Directory</h4>
-                            <p>Executed Kerberoasting attacks to crack service account passwords offline.</p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-file-contract" style="color:#00ff88;"></i>
-                            <h4>Post-Exploitation</h4>
-                            <p>Established persistence and simulated data exfiltration via DNS tunneling.</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <aside class="project-sidebar">
-                <div class="info-card">
-                    <div class="info-item">
-                        <h3>Arsenal</h3>
-                        <div class="tech-tags">
-                            <span class="tag"><i class="fab fa-linux"></i> Kali Linux</span>
-                            <span class="tag"><i class="fas fa-spider"></i> Burp Suite</span>
-                            <span class="tag"><i class="fas fa-bomb"></i> Metasploit</span>
-                            <span class="tag"><i class="fas fa-code"></i> PowerShell</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <h3>Methodology</h3>
-                        <p>PTES / OSSTMM</p>
-                    </div>
-
-                    <div class="action-buttons">
-                        <a href="#" class="btn-action btn-primary-action" style="background: #222; border: 1px solid #00ff88; color: #00ff88;">
-                            Download Findings <i class="fas fa-file-pdf"></i>
-                        </a>
-                    </div>
+            <section class="wireframe-row">
+                <div class="wf-col-image">
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop');"></div>
                 </div>
-            </aside>
+                <div class="wf-col-text">
+                    <h1>Audit Objectives & Scope</h1>
+                    <p>
+                        This operation simulated a targeted attack against "TechCorp", a fictitious entity with a complex segmented network. The primary objective was to demonstrate the business impact of unpatched vulnerabilities and weak configurations. The engagement followed a Black Box approach, starting with zero knowledge.
+                    </p>
+                    <p>
+                        The initial phase involved passive reconnaissance and active port scanning using <strong>Nmap</strong> and <strong>Masscan</strong> to map the attack surface and identify outdated services running on the perimeter.
+                    </p>
+                </div>
+            </section>
 
+            <section class="wireframe-row">
+                <div class="wf-col-text">
+                    <h2>Exploitation & Initial Access</h2>
+                    <p>
+                        In the exploitation phase, we identified a legacy web server vulnerable to deserialization attacks. <strong>Metasploit Framework</strong> was used to leverage this CVE, allowing us to deploy a reverse shell and gain initial access to the DMZ.
+                    </p>
+                    <p>
+                        Once inside, we established persistence using scheduled tasks and set up a C2 (Command & Control) channel over encrypted HTTPS traffic to evade basic firewall detection rules.
+                    </p>
+                </div>
+                <div class="wf-col-image">
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000&auto=format&fit=crop');"></div>
+                </div>
+            </section>
+
+            <section class="wireframe-row">
+                <div class="wf-col-image">
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop');"></div>
+                </div>
+                <div class="wf-col-text">
+                    <h2>Active Directory Lateral Movement</h2>
+                    <p>
+                        After pivoting to the internal network using Chisel, we utilized <strong>BloodHound</strong> to map the Active Directory trust relationships. We identified a path to Domain Admin via a user with excessive delegation rights.
+                    </p>
+                    <p>
+                        We performed a <strong>Kerberoasting</strong> attack to extract service account hashes and cracked them offline using Hashcat. This allowed us to impersonate a privileged user and move laterally to the Domain Controller.
+                    </p>
+                </div>
+            </section>
+
+            <section class="wireframe-row">
+                <div class="wf-col-text">
+                    <h2>Results & Remediation</h2>
+                    <p>
+                        The final result was a detailed technical report with mitigation proposals (Hardening) and firewall configuration updates to prevent future attacks and ensure data integrity.
+                    </p>
+                    <p>
+                        Key recommendations included enforcing MFA for all remote access, patching the deserialization vulnerability, and adhering to the principle of least privilege for service accounts within the Active Directory.
+                    </p>
+                </div>
+                <div class="wf-col-image">
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop');"></div>
+                </div>
+            </section>
+
+            <div class="back-btn-container">
+                <a href="projects.html" class="btn-big-back" style="background:var(--itb-red);">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+            </div>
         </div>
-
-        <div class="project-navigation-footer">
-            <h3>Want to see more projects?</h3>
-            <a href="projects.html" class="btn-big-back">
-                <i class="fas fa-arrow-left"></i> Back to Projects
-            </a>
-        </div>
-
     </main>
 
     <footer>

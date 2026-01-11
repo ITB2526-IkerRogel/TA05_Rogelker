@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOC Architecture - Project</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Project 1 - SOC Architecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/index.css">
 </head>
-<body class="detail-body">
+<body>
 
     <header>
         <div class="logo-container">
@@ -50,83 +50,74 @@
             </div>
         </div>
 
-        <div class="project-body">
+        <div class="wireframe-main">
 
-            <div class="content-column">
-                <section class="content-section">
-                    <h2>Project Overview</h2>
+            <section class="wireframe-row">
+                <div class="wf-col-image">
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop');"></div>
+                </div>
+                <div class="wf-col-text">
+                    <h1>SOC Automation & Threat Hunting</h1>
                     <p>
-                        In an era where data breaches are inevitable, detection speed is critical. This project involved building a fully functional Security Operations Center (SOC) from scratch using open-source technologies. The goal was to create a centralized platform capable of ingesting logs from firewalls, servers, and endpoints to detect anomalies in real-time.
+                        This project involved building a fully functional Security Operations Center (SOC) from scratch using open-source technologies. The goal was to create a centralized platform capable of ingesting logs from firewalls, servers, and endpoints to detect anomalies in real-time.
                     </p>
                     <p>
                         By integrating Wazuh agents for endpoint telemetry and the ELK Stack for indexing and visualization, I established a robust pipeline for security events. The system filters noise and highlights high-fidelity alerts mapped to the MITRE ATT&CK framework.
                     </p>
-                </section>
-
-                <section class="content-section">
-                    <h2>Technical Implementation</h2>
-                    <div class="features-grid">
-                        <div class="feature-box">
-                            <i class="fas fa-database" style="color:#00a8ff;"></i>
-                            <h4>Log Ingestion</h4>
-                            <p>Configured Logstash pipelines to parse syslog and JSON data from Linux/Windows fleets.</p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-code-branch" style="color:#00a8ff;"></i>
-                            <h4>Custom Rules</h4>
-                            <p>Developed Sigma rules converted to Elastic queries to detect lateral movement.</p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-robot" style="color:#00a8ff;"></i>
-                            <h4>SOAR Automation</h4>
-                            <p>Integrated TheHive & Cortex to auto-analyze suspicious IPs and file hashes.</p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-chart-area" style="color:#00a8ff;"></i>
-                            <h4>Kibana Dashboards</h4>
-                            <p>Created visual heatmaps for geo-location of attacks and brute-force trends.</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <aside class="project-sidebar">
-                <div class="info-card">
-                    <div class="info-item">
-                        <h3>Tech Stack</h3>
-                        <div class="tech-tags">
-                            <span class="tag"><i class="fas fa-search"></i> Elasticsearch</span>
-                            <span class="tag"><i class="fas fa-dog"></i> Wazuh</span>
-                            <span class="tag"><i class="fas fa-hive"></i> TheHive</span>
-                            <span class="tag"><i class="fab fa-docker"></i> Docker</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <h3>Focus</h3>
-                        <p>Defensive Security / SIEM</p>
-                    </div>
-
-                    <div class="action-buttons">
-                        <a href="#" class="btn-action btn-primary-action" style="background: #1e293b; border: 1px solid #00a8ff; color: #00a8ff;">
-                            View Architecture <i class="fas fa-sitemap"></i>
-                        </a>
-                        <a href="#" class="btn-action btn-secondary-action">
-                            GitHub Configs <i class="fab fa-github"></i>
-                        </a>
-                    </div>
                 </div>
-            </aside>
+            </section>
 
+            <section class="wireframe-row">
+                <div class="wf-col-text">
+                    <h2>Automation & Incident Response</h2>
+                    <p>
+                        Automation was achieved using TheHive and Cortex to auto-analyze suspicious IPs and file hashes, significantly reducing the Mean Time to Detect (MTTD). Custom Sigma rules were developed and converted to Elastic queries to detect specific lateral movement techniques.
+                    </p>
+                    <p>
+                        We configured active response scripts in Wazuh to automatically block IP addresses performing brute-force attacks on SSH and RDP services, providing an immediate layer of defense without human intervention.
+                    </p>
+                </div>
+                <div class="wf-col-image">
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop');"></div>
+                </div>
+            </section>
+
+            <section class="wireframe-row">
+                <div class="wf-col-image">
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bbcbf?q=80&w=1000&auto=format&fit=crop');"></div>
+                </div>
+                <div class="wf-col-text">
+                    <h2>Challenges & Solutions</h2>
+                    <p>
+                        One of the main challenges was handling the high volume of logs generated by the Windows Event Forwarding system. To solve this, we implemented a Kafka message queue buffer before Logstash, ensuring no data loss during traffic spikes.
+                    </p>
+                    <p>
+                        Another hurdle was false positives in the IDS. We spent two weeks fine-tuning the Suricata ruleset, creating a whitelist for authorized internal administrative traffic, which improved the alert accuracy by 40%.
+                    </p>
+                </div>
+            </section>
+
+            <section class="wireframe-row">
+                <div class="wf-col-text">
+                    <h2>Final Results & Impact</h2>
+                    <p>
+                        The final deliverable included comprehensive Kibana dashboards for visualizing attack trends and a fully documented incident response playbook. The system successfully detected a simulated red team attack during the validation phase.
+                    </p>
+                    <p>
+                        This architecture provides a scalable foundation for any organization looking to implement 24/7 monitoring with zero licensing costs, proving that open-source security can rival enterprise solutions.
+                    </p>
+                </div>
+                <div class="wf-col-image">
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop');"></div>
+                </div>
+            </section>
+
+            <div class="back-btn-container">
+                <a href="projects.html" class="btn-big-back" style="background:var(--itb-red);">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+            </div>
         </div>
-
-        <div class="project-navigation-footer">
-            <h3>Want to see more projects?</h3>
-            <a href="projects.html" class="btn-big-back">
-                <i class="fas fa-arrow-left"></i> Back to Projects
-            </a>
-        </div>
-
     </main>
 
     <footer>
