@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project - Data Transformation TA04</title>
+    <title>Project - SSI COMPUTER</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/index.css">
-
-    <style>
-        * {
-            font-family: 'Inter', sans-serif !important;
-        }
-    </style>
 </head>
 <body>
 
@@ -38,21 +32,24 @@
             <div class="hero-circle hc2"></div>
         </div>
         <div class="hero-content">
-            <span class="hero-category" style="border:1px solid #3498db; color:#3498db;">Data Engineering</span>
-            <h1 class="hero-title">Python Data<br>Transformation (TA04)</h1>
+            <span class="hero-category cat-data">Hardware & Soporte IT</span>
+            <h1 class="hero-title">SSI COMPUTER<br>Partner Tecnológico</h1>
+            <p class="hero-desc-project">
+                Expertos en Hardware de Alto Rendimiento, Reparación y Mantenimiento para Empresas y Particulares en Poblenou.
+            </p>
         </div>
     </section>
 
     <main class="showcase-container">
 
-        <div class="project-mockup" style="background: #0f172a;">
-            <div class="browser-bar" style="background: #1e293b; border-color: #334155;">
+        <div class="project-mockup mockup-dark">
+            <div class="browser-bar bar-dark">
                 <div class="dot red"></div>
                 <div class="dot yellow"></div>
                 <div class="dot green"></div>
             </div>
-            <div class="screen-content" style="background: #0f172a; color: #3498db;">
-                <i class="fas fa-database"></i>
+            <div class="screen-content screen-data">
+                <i class="fas fa-microchip"></i>
             </div>
         </div>
 
@@ -60,66 +57,76 @@
 
             <section class="wireframe-row">
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" alt="Oficina SSI">
                 </div>
                 <div class="wf-col-text">
-                    <h1>Project Overview</h1>
+                    <h1>Quiénes Somos</h1>
                     <p>
-                        This project, titled "Data Management and Transformation with Python (TA04)", focuses on automating the data flow between industry-standard formats (CSV, XML, JSON). It was developed within the academic context of the Institut Tecnològic de Barcelona.
+                        <strong>Calidad, Innovación y Cercanía.</strong> Ubicados estratégicamente en la calle Pere IV, en el hub tecnológico de Barcelona, nacimos con una misión clara: proveer soluciones tecnológicas fiables y sostenibles.
                     </p>
                     <p>
-                        The main objective was to build efficient scripts for the migration, validation, and analysis of information regarding IT equipment incidents, covering the complete data lifecycle from ingestion to persistence.
+                        Nos diferenciamos por ofrecer un trato <strong>B2B (para empresas)</strong> y <strong>B2C (para particulares)</strong> altamente personalizado. No somos solo una tienda; somos consultores que analizan tus necesidades para ofrecerte la mejor configuración o reparación posible.
                     </p>
                 </div>
             </section>
 
             <section class="wireframe-row">
                 <div class="wf-col-text">
-                    <h2>The Workflow</h2>
+                    <h2>Nuestros Servicios</h2>
                     <p>
-                        The process began with <strong>Data Collection</strong>, creating a system to register hardware and software incidents and exporting initial results to CSV. I then developed an <strong>ETL (Extract, Transform, Load)</strong> pipeline using Python to convert this raw data into XML.
+                        <strong>🛠️ Reparación y Limpieza:</strong> No tires tu equipo, mejóralo. Realizamos reparaciones integrales (pantallas, baterías) y limpieza técnica profunda de teclados mecánicos y ventiladores.
                     </p>
                     <p>
-                        A key challenge was ensuring XML tag validity using Regular Expressions (Regex) and strictly adhering to GDPR privacy standards. Finally, the system analyzes the XML to filter errors and exports the processed results to JSON, ensuring data persistence and future reusability.
+                        <strong>🤝 Mantenimiento B2B:</strong> Asegura la continuidad de tu negocio con contratos mensuales de monitoreo y soporte remoto instantáneo.
+                    </p>
+                    <p>
+                        <strong>🛡️ Seguridad y Redes:</strong> Implementamos firewalls, servidores seguros y protección contra intrusos para que tus datos estén a salvo.
                     </p>
                 </div>
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1000&auto=format&fit=crop" alt="Reparación Hardware">
                 </div>
             </section>
 
             <section class="wireframe-row">
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1000&auto=format&fit=crop" alt="Productos Gaming">
                 </div>
                 <div class="wf-col-text">
-                    <h2>Key Functionalities</h2>
+                    <h2>Venta de Productos</h2>
                     <p>
-                        The system handles <strong>Data Ingestion</strong> by standardizing form inputs into CSV format. It features a custom <strong>CSV-to-XML Migration</strong> algorithm that cleans keys and validates tags dynamically.
+                        Hardware seleccionado para el máximo rendimiento:
                     </p>
-                    <p>
-                        Additionally, the tool performs <strong>Processing & Analysis</strong> by parsing XML files to filter erroneous data (such as invalid dates) and generating incident statistics via the console. The final step involves <strong>JSON Export</strong>, implementing file existence checks to safely store the processed information.
-                    </p>
+                    <ul class="tech-list">
+                        <li>🚀 <strong>Workstations:</strong> Equipos de potencia para desarrolladores y diseño.</li>
+                        <li>💾 <strong>Componentes Top:</strong> Gráficas, CPUs y NVMe de última generación.</li>
+                        <li>🎮 <strong>Periféricos:</strong> Teclados mecánicos custom y ratones ergonómicos.</li>
+                    </ul>
                 </div>
             </section>
 
             <section class="wireframe-row">
                 <div class="wf-col-text">
-                    <h2>Technical Specifications</h2>
+                    <h2>Nuestro Compromiso</h2>
                     <p>
-                        The project relies heavily on <strong>Python</strong> and its core libraries (csv, xml.etree.ElementTree, re) to handle logic and file manipulation without heavy external dependencies. Documentation was maintained using Markdown.
+                        <strong>♻️ Sostenibilidad Real:</strong> Priorizamos la reparación y reutilización. Usamos embalajes biodegradables y sistemas de eficiencia energética.
                     </p>
                     <p>
-                        Key competencies demonstrated include advanced <strong>Scripting</strong>, the use of <strong>Regular Expressions (Regex)</strong> for data validation, and the implementation of <strong>GDPR principles</strong> to ensure data privacy during the transformation process.
+                        <strong>📍 Visítanos en Poblenou:</strong><br>
+                        Carrer de Pere IV, Barcelona.<br>
+                        <em>L1, L4 y Bus conectado.</em>
                     </p>
+                    <div class="cta-container">
+                        <a href="contact.html" class="btn-contact-solid">Solicitar Diagnóstico</a>
+                    </div>
                 </div>
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop" alt="Sostenibilidad">
                 </div>
             </section>
 
             <div class="back-btn-container">
-                <a href="projects.html" class="btn-big-back" style="background:var(--itb-red);">
+                <a href="projects.html" class="btn-big-back btn-back-data">
                     <i class="fas fa-arrow-left"></i> Back to Projects
                 </a>
             </div>

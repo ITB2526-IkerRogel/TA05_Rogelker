@@ -179,13 +179,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if(project.url) {
                 card.href = project.url;
-                card.style.textDecoration = 'none';
-                card.style.color = 'inherit';
-                card.style.display = 'flex';
+                // Usamos una clase en CSS en lugar de estilos en línea
+                card.classList.add('project-card-link');
             }
 
             let backgroundStyle = '';
             if (project.image) {
+                // Nota: Los URLs de imágenes dinámicas DEBEN ir en style si vienen de una base de datos/array
                 backgroundStyle = `background-image: url('${project.image}');`;
             }
 
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="tech-stack-icons">
                         ${techHtml}
                     </div>
-                    ${project.url ? '<p style="margin-top:15px; font-weight:bold; color:var(--itb-red); text-transform:uppercase; font-size:0.9rem;">Click for Details <i class="fas fa-arrow-right"></i></p>' : ''}
+                    ${project.url ? '<p class="click-details-text">Click for Details <i class="fas fa-arrow-right"></i></p>' : ''}
                 </div>
             `;
             return card;
@@ -278,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerHTML;
             btn.innerHTML = '<i class="fas fa-check"></i> SENT!';
+            // Cambios de estilo vía JS para feedback instantáneo (aceptable, o usar clase .success)
             btn.style.background = '#28a745';
             setTimeout(() => {
                 alert('Message sent successfully! (Simulation)');
