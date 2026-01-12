@@ -270,22 +270,64 @@ document.addEventListener('DOMContentLoaded', () => {
         renderProjects(true);
     }
 
-    // --- 3. CONTACT LOGIC ---
+    // --- 3. CONTACT LOGIC (IMPROVED - TOAST & SPINNER) ---
     const contactForm = document.getElementById('contactForm');
+
+    // Función para mostrar notificación Toast
+    function showToast(message, type = 'success') {
+        // Crear el elemento si no existe
+        let toast = document.getElementById('toast-box');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'toast-box';
+            document.body.appendChild(toast);
+        }
+
+        // Configurar icono y color
+        const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+        toast.className = type === 'success' ? 'success' : 'error';
+
+        toast.innerHTML = `<i class="fas ${icon}"></i> <span>${message}</span>`;
+
+        // Mostrar
+        toast.classList.add('show');
+
+        // Ocultar después de 3 segundos
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
             const btn = contactForm.querySelector('button');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check"></i> SENT!';
-            // Cambios de estilo vía JS para feedback instantáneo (aceptable, o usar clase .success)
-            btn.style.background = '#28a745';
+            const originalText = "SEND NOW"; // O el texto que tengas por defecto
+
+            // 1. Estado de carga (Loading)
+            btn.innerHTML = '<i class="fas fa-spinner"></i> Sending...';
+            btn.classList.add('btn-loading'); // Deshabilita clics y cambia estilo
+
+            // 2. Simulación de envío (2 segundos)
             setTimeout(() => {
-                alert('Message sent successfully! (Simulation)');
+                // 3. Éxito
+                btn.innerHTML = '<i class="fas fa-check"></i> SENT!';
+                btn.style.background = '#27ae60'; // Verde éxito
+
+                // Mostrar notificación elegante en vez de alert
+                showToast('Message sent successfully! We will contact you soon.');
+
                 contactForm.reset();
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-            }, 1000);
+
+                // 4. Restaurar botón después de otros 2 segundos
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = ''; // Vuelve al gradiente original
+                    btn.classList.remove('btn-loading');
+                }, 2000);
+
+            }, 2000); // Tiempo de espera simulado
         });
     }
 
