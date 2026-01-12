@@ -93,6 +93,16 @@ main {
 .card-link { text-decoration: none; color: inherit; display: block; margin-bottom: 40px; }
 .card { display: flex; flex-direction: row; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 400px; position: relative; transition: all 0.3s ease; overflow: hidden; }
 .card:hover { transform: translateY(-10px) scale(1.01); box-shadow: 0 30px 60px rgba(0,0,0,0.25); border-color: var(--itb-red); z-index: 10; }
+
+/* --- NUEVA REGLA PARA IGUALAR LAS IMÁGENES --- */
+.card > img {
+    width: 18%;           /* Ancho fijo relativo a la tarjeta */
+    height: 100%;         /* Alto completo de la tarjeta (400px) */
+    object-fit: cover;    /* Rellena el espacio sin deformar, recortando si es necesario */
+    object-position: center; /* Centra la imagen */
+}
+/* --------------------------------------------- */
+
 .card .card-visual { width: 35%; height: 100%; background-size: cover; background-position: center; }
 .card-content { width: 65%; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
 .card-content h2 { font-size: 2rem; margin-bottom: 10px; color: var(--text-main); }
@@ -292,6 +302,8 @@ footer { background-color: var(--itb-black); color: #fff; padding: 40px 20px; te
     nav ul { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--itb-black); flex-direction: column; padding: 20px; }
     nav ul.show-menu { display: flex; }
     .card { flex-direction: column; height: auto; }
+    /* Ajuste para que la imagen ocupe todo el ancho en móvil */
+    .card > img { width: 100%; height: 200px; }
     .card-visual { width: 100%; height: 200px; }
     .card-content { width: 100%; padding: 30px; }
 }

@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pentesting Audit - Project</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Project - Data Transformation TA04</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/index.css">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif !important;
+        }
+    </style>
 </head>
-<body class="detail-body">
+<body>
 
     <header>
         <div class="logo-container">
@@ -32,21 +38,21 @@
             <div class="hero-circle hc2"></div>
         </div>
         <div class="hero-content">
-            <span class="hero-category" style="border:1px solid #00ff88; color:#00ff88;">Red Team Operations</span>
-            <h1 class="hero-title">Advanced Corporate<br>Infrastructure Pentest</h1>
+            <span class="hero-category" style="border:1px solid #3498db; color:#3498db;">Data Engineering</span>
+            <h1 class="hero-title">Python Data<br>Transformation (TA04)</h1>
         </div>
     </section>
 
     <main class="showcase-container">
 
-        <div class="project-mockup" style="background: #0d0d0d;">
-            <div class="browser-bar" style="background: #1a1a1a; border-color: #333;">
+        <div class="project-mockup" style="background: #0f172a;">
+            <div class="browser-bar" style="background: #1e293b; border-color: #334155;">
                 <div class="dot red"></div>
                 <div class="dot yellow"></div>
                 <div class="dot green"></div>
             </div>
-            <div class="screen-content" style="background: #000; color: #00ff88; font-family: monospace;">
-                <i class="fas fa-terminal"></i>
+            <div class="screen-content" style="background: #0f172a; color: #3498db;">
+                <i class="fas fa-database"></i>
             </div>
         </div>
 
@@ -54,31 +60,31 @@
 
             <section class="wireframe-row">
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop');"></div>
                 </div>
                 <div class="wf-col-text">
-                    <h1>Audit Objectives & Scope</h1>
+                    <h1>Project Overview</h1>
                     <p>
-                        This operation simulated a targeted attack against "TechCorp", a fictitious entity with a complex segmented network. The primary objective was to demonstrate the business impact of unpatched vulnerabilities and weak configurations. The engagement followed a Black Box approach, starting with zero knowledge.
+                        This project, titled "Data Management and Transformation with Python (TA04)", focuses on automating the data flow between industry-standard formats (CSV, XML, JSON). It was developed within the academic context of the Institut Tecnològic de Barcelona.
                     </p>
                     <p>
-                        The initial phase involved passive reconnaissance and active port scanning using <strong>Nmap</strong> and <strong>Masscan</strong> to map the attack surface and identify outdated services running on the perimeter.
+                        The main objective was to build efficient scripts for the migration, validation, and analysis of information regarding IT equipment incidents, covering the complete data lifecycle from ingestion to persistence.
                     </p>
                 </div>
             </section>
 
             <section class="wireframe-row">
                 <div class="wf-col-text">
-                    <h2>Exploitation & Initial Access</h2>
+                    <h2>The Workflow</h2>
                     <p>
-                        In the exploitation phase, we identified a legacy web server vulnerable to deserialization attacks. <strong>Metasploit Framework</strong> was used to leverage this CVE, allowing us to deploy a reverse shell and gain initial access to the DMZ.
+                        The process began with <strong>Data Collection</strong>, creating a system to register hardware and software incidents and exporting initial results to CSV. I then developed an <strong>ETL (Extract, Transform, Load)</strong> pipeline using Python to convert this raw data into XML.
                     </p>
                     <p>
-                        Once inside, we established persistence using scheduled tasks and set up a C2 (Command & Control) channel over encrypted HTTPS traffic to evade basic firewall detection rules.
+                        A key challenge was ensuring XML tag validity using Regular Expressions (Regex) and strictly adhering to GDPR privacy standards. Finally, the system analyzes the XML to filter errors and exports the processed results to JSON, ensuring data persistence and future reusability.
                     </p>
                 </div>
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop');"></div>
                 </div>
             </section>
 
@@ -87,28 +93,28 @@
                     <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop');"></div>
                 </div>
                 <div class="wf-col-text">
-                    <h2>Active Directory Lateral Movement</h2>
+                    <h2>Key Functionalities</h2>
                     <p>
-                        After pivoting to the internal network using Chisel, we utilized <strong>BloodHound</strong> to map the Active Directory trust relationships. We identified a path to Domain Admin via a user with excessive delegation rights.
+                        The system handles <strong>Data Ingestion</strong> by standardizing form inputs into CSV format. It features a custom <strong>CSV-to-XML Migration</strong> algorithm that cleans keys and validates tags dynamically.
                     </p>
                     <p>
-                        We performed a <strong>Kerberoasting</strong> attack to extract service account hashes and cracked them offline using Hashcat. This allowed us to impersonate a privileged user and move laterally to the Domain Controller.
+                        Additionally, the tool performs <strong>Processing & Analysis</strong> by parsing XML files to filter erroneous data (such as invalid dates) and generating incident statistics via the console. The final step involves <strong>JSON Export</strong>, implementing file existence checks to safely store the processed information.
                     </p>
                 </div>
             </section>
 
             <section class="wireframe-row">
                 <div class="wf-col-text">
-                    <h2>Results & Remediation</h2>
+                    <h2>Technical Specifications</h2>
                     <p>
-                        The final result was a detailed technical report with mitigation proposals (Hardening) and firewall configuration updates to prevent future attacks and ensure data integrity.
+                        The project relies heavily on <strong>Python</strong> and its core libraries (csv, xml.etree.ElementTree, re) to handle logic and file manipulation without heavy external dependencies. Documentation was maintained using Markdown.
                     </p>
                     <p>
-                        Key recommendations included enforcing MFA for all remote access, patching the deserialization vulnerability, and adhering to the principle of least privilege for service accounts within the Active Directory.
+                        Key competencies demonstrated include advanced <strong>Scripting</strong>, the use of <strong>Regular Expressions (Regex)</strong> for data validation, and the implementation of <strong>GDPR principles</strong> to ensure data privacy during the transformation process.
                     </p>
                 </div>
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=1000&auto=format&fit=crop');"></div>
                 </div>
             </section>
 

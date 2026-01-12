@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - SOC Architecture</title>
+    <title>Project - Protocolo Palma</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/index.css">
@@ -32,8 +32,8 @@
             <div class="hero-circle hc2"></div>
         </div>
         <div class="hero-content">
-            <span class="hero-category" style="border:1px solid #00a8ff; color:#00a8ff;">Blue Team Defense</span>
-            <h1 class="hero-title">Next-Gen SOC<br>Implementation</h1>
+            <span class="hero-category" style="border:1px solid #a55eea; color:#a55eea;">Game Development</span>
+            <h1 class="hero-title">Protocolo Palma<br>2D Metroidvania</h1>
         </div>
     </section>
 
@@ -45,8 +45,8 @@
                 <div class="dot yellow"></div>
                 <div class="dot green"></div>
             </div>
-            <div class="screen-content" style="background: #0f172a; color: #00a8ff; font-family: monospace;">
-                <i class="fas fa-shield-virus"></i>
+            <div class="screen-content" style="background: #0f172a; color: #a55eea;">
+                <i class="fas fa-gamepad"></i>
             </div>
         </div>
 
@@ -54,61 +54,61 @@
 
             <section class="wireframe-row">
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <img src="IMG/escenario_godot.png">
                 </div>
                 <div class="wf-col-text">
-                    <h1>SOC Automation & Threat Hunting</h1>
+                    <h1>Project Overview</h1>
                     <p>
-                        This project involved building a fully functional Security Operations Center (SOC) from scratch using open-source technologies. The goal was to create a centralized platform capable of ingesting logs from firewalls, servers, and endpoints to detect anomalies in real-time.
+                        Protocolo Palma is a 2D Metroidvania-style platformer developed as a student project at the Institut Tecnològic de Barcelona. The game combines exploration, combat, and puzzle-solving in a hostile alien environment.
                     </p>
                     <p>
-                        By integrating Wazuh agents for endpoint telemetry and the ELK Stack for indexing and visualization, I established a robust pipeline for security events. The system filters noise and highlights high-fidelity alerts mapped to the MITRE ATT&CK framework.
+                        Designed with a focus on environmental storytelling and progressive mechanics, the player must adapt to an unknown world to survive while mastering new abilities.
                     </p>
                 </div>
             </section>
 
             <section class="wireframe-row">
                 <div class="wf-col-text">
-                    <h2>Automation & Incident Response</h2>
+                    <h2>Synopsis</h2>
                     <p>
-                        Automation was achieved using TheHive and Cortex to auto-analyze suspicious IPs and file hashes, significantly reducing the Mean Time to Detect (MTTD). Custom Sigma rules were developed and converted to Elastic queries to detect specific lateral movement techniques.
+                        The story follows three friends: Saba, Jesús, and Iker. During a quiet afternoon in the park, an alien portal opens, and a biomechanical creature kidnaps Jesús, taking him to the mysterious Planet Vegeta to control his mind using an artificial intelligence known as the "Mind Core."
                     </p>
                     <p>
-                        We configured active response scripts in Wazuh to automatically block IP addresses performing brute-force attacks on SSH and RDP services, providing an immediate layer of defense without human intervention.
+                        Armed with runic devices and guided by Elyra, a local rebel warrior, Iker and Saba must travel to this strange world, face its dangers, and defeat the alien guardians to rescue their friend before he loses his humanity forever.
                     </p>
                 </div>
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <img src="IMG/enemigo_godot.png">
                 </div>
             </section>
 
             <section class="wireframe-row">
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bbcbf?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1000&auto=format&fit=crop');"></div>
                 </div>
                 <div class="wf-col-text">
-                    <h2>Challenges & Solutions</h2>
+                    <h2>Key Features</h2>
                     <p>
-                        One of the main challenges was handling the high volume of logs generated by the Windows Event Forwarding system. To solve this, we implemented a Kafka message queue buffer before Logstash, ensuring no data loss during traffic spikes.
+                        The core gameplay revolves around a fluid platforming system and combat utilizing elemental runic abilities such as fire, speed, and electricity. Players can switch between unique characters: Iker, who is agile and equipped with an alien bow; Saba, the heavy "tank" with high strength and a tech mace; and Jesús, who utilizes a wheelchair with an integrated cannon.
                     </p>
                     <p>
-                        Another hurdle was false positives in the IDS. We spent two weeks fine-tuning the Suricata ruleset, creating a whitelist for authorized internal administrative traffic, which improved the alert accuracy by 40%.
+                        To progress, players must defeat three major guardians who protect the rescue runes: Gor'khan, the swamp beast; Astrael, the psychic illusionist; and T'Varak, the master of shadows. Each encounter requires mastering different combat strategies.
                     </p>
                 </div>
             </section>
 
             <section class="wireframe-row">
                 <div class="wf-col-text">
-                    <h2>Final Results & Impact</h2>
+                    <h2>Technical Specifications</h2>
                     <p>
-                        The final deliverable included comprehensive Kibana dashboards for visualizing attack trends and a fully documented incident response playbook. The system successfully detected a simulated red team attack during the validation phase.
+                        The project was built using the Godot Engine (GDScript), featuring completely original Pixel Art for all characters, backgrounds, and animations. We implemented a robust infrastructure by configuring a secure DMZ server using IPFire to host the game's web services safely.
                     </p>
                     <p>
-                        This architecture provides a scalable foundation for any organization looking to implement 24/7 monitoring with zero licensing costs, proving that open-source security can rival enterprise solutions.
+                        Currently, the project is in active development with Sprints 1 and 2 completed. This phase includes the implementation of base mechanics, initial level design, and the core enemy AI behaviors.
                     </p>
                 </div>
                 <div class="wf-col-image">
-                    <div class="wf-image-box" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <img src="IMG/rana_godot.png">
                 </div>
             </section>
 
