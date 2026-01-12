@@ -1,46 +1,46 @@
-# 🛡️ Portfolio de Ciberseguridad y Desarrollo Web - ITB
+# 🛡️ Cybersecurity & Web Development Portfolio - ITB
 
-Este repositorio contiene el código fuente de un sitio web tipo portfolio personal/profesional, diseñado para mostrar proyectos de Ciberseguridad, Desarrollo Web y Programación. El sitio es totalmente responsivo, cuenta con modo oscuro y una gestión dinámica de proyectos mediante JavaScript.
+This repository contains the source code for a personal/professional portfolio website, designed to showcase Cybersecurity, Web Development, and Programming projects. The site is fully responsive, features a dark mode, and utilizes dynamic project management via JavaScript.
 
-## 🚀 Características Principales
+## 🚀 Key Features
 
-* **Diseño Responsivo:** Adaptable a móviles, tablets y escritorio (Mobile-First).
-* **Modo Oscuro (Dark Mode):** Preferencia guardada en el navegador (`localStorage`) para recordar la elección del usuario.
-* **Gestión Dinámica de Proyectos:** Los proyectos en la página `projects.html` se generan automáticamente desde un array de objetos en JavaScript, facilitando la escalabilidad.
-* **Sistema de Filtrado:** Filtros funcionales para ver proyectos por categoría (All, Cybersecurity, Web Dev, Programming).
-* **Páginas de Detalle (Zig-Zag):** Estructura visual alterna (imagen-texto / texto-imagen) para la descripción profunda de proyectos.
-* **Simulación de Contacto:** Formulario con validación visual, estado de "Cargando" y notificaciones tipo "Toast" (sin recarga de página).
-* **Animaciones:** Efectos de aparición suave al hacer scroll (`IntersectionObserver`).
-* **Código Limpio:** Separación estricta de estructura (HTML), estilo (CSS) y lógica (JS). **Cero estilos en línea.**
+* **Responsive Design:** Adaptable to mobile, tablet, and desktop (Mobile-First approach).
+* **Dark Mode:** User preference is saved in the browser (`localStorage`) to remember the choice.
+* **Dynamic Project Management:** Projects on the `projects.html` page are generated automatically from a JavaScript object array, making it easy to scale.
+* **Filtering System:** Functional filters to view projects by category (All, Cybersecurity, Web Dev, Programming).
+* **Detail Pages (Zig-Zag):** Alternating visual structure (image-text / text-image) for in-depth project descriptions.
+* **Contact Simulation:** Form with visual validation, "Loading" state, and "Toast" style notifications (no page reload).
+* **Animations:** Smooth fade-in effects upon scrolling (`IntersectionObserver`).
+* **Clean Code:** Strict separation of Structure (HTML), Style (CSS), and Logic (JS). **Zero inline styles.**
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
-* **HTML5:** Estructura semántica (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`).
-* **CSS3:** Variables CSS (`:root`), Flexbox, CSS Grid y Media Queries.
-* **JavaScript (Vanilla):** Manipulación del DOM, Event Listeners y lógica de renderizado.
-* **Recursos Externos:**
-    * [FontAwesome](https://fontawesome.com/) (Iconos).
-    * [Google Fonts](https://fonts.google.com/) (Tipografía Inter).
+* **HTML5:** Semantic structure (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`).
+* **CSS3:** CSS Variables (`:root`), Flexbox, CSS Grid, and Media Queries.
+* **JavaScript (Vanilla):** DOM manipulation, Event Listeners, and rendering logic.
+* **External Resources:**
+    * [FontAwesome](https://fontawesome.com/) (Icons).
+    * [Google Fonts](https://fonts.google.com/) (Inter Typography).
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
 ```text
 /
-├── index.html            # Página de inicio (Landing Page)
-├── projects.html         # Galería completa de proyectos (con filtros)
-├── about-me.html         # Biografía, habilidades y línea de tiempo
-├── contact.html          # Formulario de contacto
-├── project-detail-1.html # Detalle Proyecto: Palma Protocol (Game Dev)
-├── project-detail-2.html # Detalle Proyecto: SSI Computer (Hardware/IT)
+├── index.html            # Landing Page
+├── projects.html         # Complete project gallery (with filters)
+├── about-me.html         # Biography, skills, and timeline
+├── contact.html          # Contact form
+├── project-detail-1.html # Project Detail: Palma Protocol (Game Dev)
+├── project-detail-2.html # Project Detail: SSI Computer (Hardware/IT)
 │
 ├── CSS/
-│   └── index.css         # Hoja de estilos única y global
+│   └── index.css         # Single global stylesheet
 │
 ├── JS/
-│   └── java.js           # Lógica del menú, modo oscuro y base de datos de proyectos
+│   └── java.js           # Logic for menu, dark mode, and project database
 │
-└── IMG/                  # Imágenes generales (Logos, iconos, etc.)
-    ├── IMG_PROY_CIB/     # Carpeta específica para capturas de ciberseguridad
+└── IMG/                  # General images (Logos, icons, etc.)
+    ├── IMG_PROY_CIB/     # Specific folder for cybersecurity screenshots
     │   ├── proy_cib_1.png
     │   ├── proy_cib_2.png
     │   └── ...
