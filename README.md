@@ -1,8 +1,10 @@
-# 🛡️ Cybersecurity & Web Development Portfolio - ITB
+# Iker Rogel - Cybersecurity Student Portfolio (ITB)
 
-This repository contains the source code for a personal/professional portfolio website, designed to showcase Cybersecurity, Web Development, and Programming projects. The site is fully responsive, features a dark mode, and utilizes dynamic project management via JavaScript.
+Hi! I'm **Iker Rogel**, a **Cybersecurity student at ITB**.
 
-## 🚀 Key Features
+This repository contains the source code for **my personal portfolio website**, designed to showcase my journey and projects in Cybersecurity, Web Development, and Programming. The site is fully responsive, features a dark mode, and utilizes dynamic project management via JavaScript.
+
+## Key Features
 
 * **Responsive Design:** Adaptable to mobile, tablet, and desktop (Mobile-First approach).
 * **Dark Mode:** User preference is saved in the browser (`localStorage`) to remember the choice.
@@ -13,7 +15,7 @@ This repository contains the source code for a personal/professional portfolio w
 * **Animations:** Smooth fade-in effects upon scrolling (`IntersectionObserver`).
 * **Clean Code:** Strict separation of Structure (HTML), Style (CSS), and Logic (JS). **Zero inline styles.**
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **HTML5:** Semantic structure (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`).
 * **CSS3:** CSS Variables (`:root`), Flexbox, CSS Grid, and Media Queries.
@@ -22,7 +24,7 @@ This repository contains the source code for a personal/professional portfolio w
     * [FontAwesome](https://fontawesome.com/) (Icons).
     * [Google Fonts](https://fonts.google.com/) (Inter Typography).
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 /
@@ -44,4 +46,3 @@ This repository contains the source code for a personal/professional portfolio w
     │   ├── proy_cib_1.png
     │   ├── proy_cib_2.png
     │   └── ...
-    └── ...
